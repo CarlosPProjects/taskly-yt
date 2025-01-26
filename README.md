@@ -8,7 +8,8 @@ _Next.js Full-Stack Application with Real-Time AI Integration_
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcarlospprojects%2Ftaskly-yt)
 
-![App Preview](https://via.placeholder.com/800x400.png?text=AI+Productivity+Suite+Demo)
+![App Preview](https://github.com/user-attachments/assets/b3994c2c-29d9-4619-bea6-04ae4abe0dd7)
+
 
 ## 🌟 Features
 
