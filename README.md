@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+---
+
+# AI-Powered Productivity Suite 🚀
+
+_Next.js Full-Stack Application with Real-Time AI Integration_
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcarlospprojects%2Ftaskly-yt)
+
+![App Preview](https://via.placeholder.com/800x400.png?text=AI+Productivity+Suite+Demo)
+
+## 🌟 Features
+
+- **AI Task Assistant**
+  - Natural language CRUD operations via chat
+  - Data analysis and optimization suggestions
+  - Toolcalling with Vercel AI SDK
+- **Core Functionality**
+  - Real-time task synchronization (Convex DB)
+  - Secure authentication (Clerk)
+  - Responsive dashboard with metrics
+- **Tech Highlights**
+  - Type-safe API layer
+  - Modern UI components (shadcn/ui)
+  - Edge-ready deployment
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15 (App Router), TailwindCSS
+- **Backend**: Convex (Database/Server Functions)
+- **Auth**: Clerk
+- **AI**: Vercel AI SDK, OpenAI API
+- **Tools**: TypeScript, Zod, React Query
+
+## ⚡ Quick Start
+
+### Prerequisites
+
+- Node.js 20+ OR pnpm 9+
+- OpenAI API Key
+- Clerk & Convex accounts
+
+### Installation
+
+```bash
+git clone https://github.com/carlospprojects/taskly-yt.git
+cd taskly-yt
+npm install  # or pnpm install / yarn
+```
+
+### Configuration
+
+1. Create `.env.local` file:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
+CLERK_SECRET_KEY=your_clerk_secret
+CONVEX_DEPLOYMENT=your_convex_deployment
+NEXT_PUBLIC_CONVEX_URL=your_convex_url
+OPENAI_API_KEY=your_openai_key
+DEEPSEEK_API_KEY=optional_deepseek_key
+```
+
+2. Set up services:
+
+- [Clerk Setup Guide](https://clerk.com/docs)
+- [Convex Initialization](https://docs.convex.dev/get-started)
+- [OpenAI Key](https://platform.openai.com/api-keys)
+
+### Running Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Convex development mode
+npx convex dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 AI Interaction Examples
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```plaintext
+/user: "Create new task 'Fix responsive layout' with high priority"
+/ai: Creates task and confirms via database mutation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+/user: "Show me overdue tasks from last week"
+/ai: Queries DB and returns filtered results
 
-## Learn More
+/user: "Analyze my productivity patterns"
+/ai: Generates report using task metadata
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Vercel:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+vercel
+```
 
-## Deploy on Vercel
+2. Set same environment variables in production
+3. Configure Convex production project:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx convex deploy
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📂 Project Structure
+
+```
+/src
+├── app/(dashboard)       # Auth-protected routes
+├── app/api               # Edge API routes
+├── components            # Global components
+├── lib                   # Utils, hooks, etc.
+├── hooks                 # Custom hooks
+├── ai                    # Tools, AI SDK, etc.
+└── constants             # Constants, enums, etc.
+/convex                   # Database config, schema & mutations
+```
+
+---
+
+**Need Help?**  
+Open an issue or contact [carlos@cgaravito.dev](mailto:carlos@cgaravito.dev)
+
+[![GitHub Stars](https://img.shields.io/github/stars/carlospprojects/taskly-yt?style=social)](https://github.com/carlospprojects/taskly-yt)
+
+---
