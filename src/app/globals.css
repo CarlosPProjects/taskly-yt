@@ -70,3 +70,14 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .__hideScrollBar{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .__hideScrollBar::-webkit-scrollbar{
+    display: none;
+  }
+}
